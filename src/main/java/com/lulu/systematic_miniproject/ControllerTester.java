@@ -1,4 +1,5 @@
 package com.lulu.systematic_miniproject;
+
 import java.sql.SQLException;
 
 import com.lulu.systematic_miniproject.BusinessLogic;
@@ -11,10 +12,9 @@ public class ControllerTester {
 		BusinessLogic bl = new BusinessLogic();
 		bl.createData();
 		bl.readData();
-		 bl.deleteData();
-		 bl.updateData();
+		bl.deleteData();
+		bl.updateData();
 
 	}
 
 }
-

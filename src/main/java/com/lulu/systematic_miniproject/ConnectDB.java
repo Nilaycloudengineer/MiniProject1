@@ -1,6 +1,5 @@
 package com.lulu.systematic_miniproject;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -23,4 +22,3 @@ public class ConnectDB {
 
 	}
 }
-

@@ -1,13 +1,12 @@
 package com.lulu.systematic_miniproject;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.lulu.database.systematic.ConnectDB;
+
 
 public class BusinessLogic {
 
@@ -48,9 +47,8 @@ public class BusinessLogic {
 		}
 
 	}
-	
-	void updateData() throws SQLException {
 
+	void updateData() throws SQLException {
 
 		Connection connection = ConnectDB.setupConnection();
 		String query = "update product set name= ? where id = ? ";
@@ -60,9 +58,8 @@ public class BusinessLogic {
 		boolean success = myStmt.execute();
 		System.out.println("Deleted Successfully " + success);
 
- 
-
 	}
+
 	void deleteData() throws SQLException {
 		Connection connection = ConnectDB.setupConnection();
 		String query = "delete from product where id = ? ";
@@ -71,9 +68,6 @@ public class BusinessLogic {
 		boolean success = myStmt.execute();
 		System.out.println("Deleted Successfully " + success);
 
- 
-
 	}
-
 
 }
