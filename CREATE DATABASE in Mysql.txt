@@ -1,0 +1,24 @@
+CREATE DATABASE nilay;
+
+show databases;
+
+USE nilay;
+
+
+
+CREATE TABLE product (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    cost DECIMAL(10, 2),
+    description TEXT
+);
+INSERT INTO product ( id, name, cost,description  ) VALUES( 111, "Mango", 200 , "It contains vitamin A" );
+INSERT INTO product ( id, name, cost,description  ) VALUES( 222, "Apple", 250 , "It contains iron");
+INSERT INTO product ( id, name, cost,description  ) VALUES( 333, "Orange", 100 , "It contains vitamin C");
+INSERT INTO product ( id, name, cost,description  ) VALUES( 444, "Watermelon", 80 , "It contains magnesium");
+
+select * from product;
+
+
+
+
