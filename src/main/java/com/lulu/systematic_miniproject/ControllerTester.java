@@ -11,8 +11,8 @@ public class ControllerTester {
 		BusinessLogic bl = new BusinessLogic();
 		bl.createData();
 		bl.readData();
-		// bl.deletData();
-		// bl.updateData();
+		 bl.deleteData();
+		 bl.updateData();
 
 	}
 

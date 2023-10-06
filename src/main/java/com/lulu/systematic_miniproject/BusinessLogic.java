@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.lulu.database.systematic.ConnectDB;
+
 public class BusinessLogic {
 
 	// CRUD Operations
@@ -16,10 +18,10 @@ public class BusinessLogic {
 		String query = "INSERT INTO product ( id, name, cost , description ) VALUES( ?, ?,?,?)";
 
 		PreparedStatement myStmt = connection.prepareStatement(query);
-		myStmt.setInt(1, 567);
-		myStmt.setString(2, "melon");
-		myStmt.setInt(3, 420);
-		myStmt.setString(4, "It improve bone and heart health");
+		myStmt.setInt(1, 777);
+		myStmt.setString(2, "Avocado");
+		myStmt.setInt(3, 620);
+		myStmt.setString(4, "Contains fiber, aiding in digestion and weight management");
 
 		int success = myStmt.executeUpdate();
 		System.out.println("Added Successfully " + success);
@@ -46,5 +48,32 @@ public class BusinessLogic {
 		}
 
 	}
+	
+	void updateData() throws SQLException {
+
+
+		Connection connection = ConnectDB.setupConnection();
+		String query = "update product set name= ? where id = ? ";
+		PreparedStatement myStmt = connection.prepareStatement(query);
+		myStmt.setString(1, "Berries");
+		myStmt.setInt(2, 333);
+		boolean success = myStmt.execute();
+		System.out.println("Deleted Successfully " + success);
+
+ 
+
+	}
+	void deleteData() throws SQLException {
+		Connection connection = ConnectDB.setupConnection();
+		String query = "delete from product where id = ? ";
+		PreparedStatement myStmt = connection.prepareStatement(query);
+		myStmt.setInt(1, 222);
+		boolean success = myStmt.execute();
+		System.out.println("Deleted Successfully " + success);
+
+ 
+
+	}
+
 
 }
